@@ -1,0 +1,3 @@
+# Cached HTML output
+html/*
+!html/.gitkeep
