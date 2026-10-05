@@ -9,6 +9,7 @@ Include the PHP files in your `index.php`.
 ```
 flag-days.php         Statutory Finnish flag days
 sun.php               Today's sunrise/sunset via PHP date_sun_info()
+warning-signal.php    Finnish monthly alarm-test indicator
 weather.php           FMI HARMONIE point forecast
 weather-warnings.php  FMI CAP warnings feed, Helsinki-area keyword filter
 bus-stops.php         HSL/Digitransit departures
@@ -22,6 +23,7 @@ Most `.php` renderers are self-contained: they write their rendered HTML to a si
 |---|---|---|
 | Flag days | Hardcoded list (Finnish Flag Act) | n/a — deterministic |
 | Sunrise / sunset | PHP `date_sun_info()` (local computation, no network) | once per calendar day |
+| Warning-signal test day | Finds out using PHP if today is first non-holiday Monday of the month | 5 minutes |
 | Weather | FMI Open Data WFS — HARMONIE point forecast | 5 minutes |
 | Weather warnings | FMI CAP Atom feed (`alerts.fmi.fi`) | 30 minutes |
 | Bus stops | Digitransit GraphQL (HSL) | 5 minutes |
